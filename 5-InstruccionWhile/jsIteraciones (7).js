@@ -4,15 +4,15 @@ function Mostrar()
 	var contador=0;
 	var acumulador=0;
 	var numero;
-	var respuesta="si";
+	var respuesta;
 	var promedio;
 
-	while(respuesta == "si") {
-		numero = parseInt(prompt('Ingresa el número'));
-		respuesta = prompt('¿seguir ingresando números?');
+	do {
+		numero = parseInt(prompt('Ingresa el número:'));
+		respuesta = prompt('¿seguir ingresando números? (si/no)');
 		acumulador += numero;
 		contador++;
-	}
+	}while(respuesta == "si");
 
 	promedio = acumulador/contador;
 
